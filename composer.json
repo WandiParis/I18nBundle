@@ -1,0 +1,31 @@
+{
+  "name": "wandi/i18n-bundle",
+  "type": "symfony-bundle",
+  "description": "WandiI18nBundle",
+  "keywords": [
+    "Symfony",
+    "Bundle",
+    "WandiI18nBundle"
+  ],
+  "homepage": "https://github.com/WandiParis/I18nBundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jean-Baptiste Châteaux",
+      "email": "jean-baptiste.chateaux@wandi.fr"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=5.5.0"
+  },
+  "require-dev": {
+  },
+  "suggest": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Wandi\\I18nBundle\\": ""
+    }
+  }
+}

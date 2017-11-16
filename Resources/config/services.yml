@@ -1,0 +1,6 @@
+services:
+    wandi_i18n.translatable_listener:
+        class: Wandi\I18nBundle\EventSubscriber\TranslatableListener
+        arguments: ["@request_stack", "%kernel.default_locale%"]
+        tags:
+            - { name: doctrine.event_listener, event: postLoad }
