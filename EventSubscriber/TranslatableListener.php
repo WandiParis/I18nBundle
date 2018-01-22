@@ -4,6 +4,7 @@ namespace Wandi\I18nBundle\EventSubscriber;
 
 use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Doctrine\Common\Util\ClassUtils;
 
 class TranslatableListener
 {
@@ -20,7 +21,10 @@ class TranslatableListener
     {
         $request = $this->requestStack->getCurrentRequest();
         $entity = $args->getObject();
-        $traits = class_uses($entity);
+
+        $entityClassName = ClassUtils::getClass($entity);
+        $traits = class_uses($entityClassName);
+
         if (in_array("Wandi\\I18nBundle\\Traits\\TranslatableEntity", $traits)) {
             $entity->setLocale(($request) ? $request->getLocale() : $this->defaultLocale);
         }
