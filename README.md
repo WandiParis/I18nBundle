@@ -42,7 +42,7 @@ class Foo
      *
      * @ORM\Column(name="bar_en", type="string", length=255)
      */
-    private barEn;
+    private $barEn;
 }
 ```
 
@@ -56,7 +56,7 @@ class Foo
 {{ Foo.bar }}
 ```
 
-#### Bar
+#### Controller
 
 ```php
 $foo->getBar();
