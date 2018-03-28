@@ -48,7 +48,7 @@ class Foo
 
 ### View and Controller
 
-* The annotation will automatically use the correct getter depending the current language used. 
+* The trait will automatically use the correct getter depending to the current language used. 
 
 #### View 
 
